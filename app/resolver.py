@@ -12,6 +12,7 @@ def random_genres_items(genre):
     genre_df = genre_df.fillna('')
 
     # Todo 선택한 장르의 갯수가 5보다 작은경우 처리해야함 : 2025.3.31 이용희
+    # genre_df.size, len(genre_df), genre_df.shape
 
     nitem = min(5, genre_df.size)  # genre_df.shape[0] : 크기. [1]: 칼럼갯수
     result_items = genre_df.sample(n=nitem).to_dict("records")
